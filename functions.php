@@ -43,8 +43,8 @@ function randomValue(array $input){
 function addRandomTile($gameBoard, array $values = array(2,4)){
 	// Note: array_keys returns a random key not a value
 	$emptyTiles = array_keys($gameBoard, 0); // Array of keys with a value of 0 from the $gameBoard array
-	$randomKey = randomVale($emptyTiles); // Select a random empty key to use when adding a value to $gameBoard
-	$gameBoard[$randomKey] = randomVale($values); // Set the empty tile to a value from the $values array
+	$randomKey = randomValue($emptyTiles); // Select a random empty key to use when adding a value to $gameBoard
+	$gameBoard[$randomKey] = randomValue($values); // Set the empty tile to a value from the $values array
 	return $gameBoard;
 }
 
