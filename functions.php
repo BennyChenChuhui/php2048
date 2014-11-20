@@ -155,5 +155,16 @@ function gameTurn($gameBoard, $direction){
 	}else{
 		$newGameBoard = columnsToGameBoard($lines);
 	}
+
+	// Add a random value to a blank tile
+	$newGameBoard = addRandomTile($newGameBoard);
 	return $newGameBoard;
+}
+
+/**
+ * Returns a new game board array
+ */
+function emptyGameBoard($vector){
+	$boardSize = pow($vector, 2);
+	return array_fill(0,$boardSize,0);
 }
